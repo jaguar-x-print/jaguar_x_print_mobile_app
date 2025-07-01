@@ -129,6 +129,36 @@ flutter emulators
 flutter emulators --launch nom_emulateur
 ```
 
+## 🔐 Configuration Google Sign-In & Drive
+Voici ce que tu dois avoir côté Google Cloud Console :
+
+1. Créer un projet Google Cloud
+→ https://console.cloud.google.com
+
+2. Activer les API suivantes :
+- Google Drive API
+- Identity Toolkit API
+- OAuth 2.0 Client ID
+
+3. Créer un OAuth 2.0 Client ID :
+- Type : Android
+- SHA1 + nom du package requis
+- Copie le fichier google-services.json dans /android/app
+
+4. Dans AndroidManifest.xml :
+Ajoute :
+
+```bash
+<uses-permission android:name="android.permission.INTERNET"/>
+```
+Et dans <application> :
+```bash
+<meta-data
+  android:name="com.google.android.gms.version"
+  android:value="@integer/google_play_services_version" />
+```
+
+
 ### 🤝 Auteur
 Kamela Pierrick Dack
 📧 kamelapierrick@gmail.com
