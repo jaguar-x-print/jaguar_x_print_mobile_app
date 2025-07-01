@@ -151,7 +151,7 @@ Ajoute :
 ```bash
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
-Et dans <application> :
+Et dans < application > :
 ```bash
 <meta-data
   android:name="com.google.android.gms.version"
